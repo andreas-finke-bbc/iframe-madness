@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>title</title>
+  </head>
+  <script>
+    function add() {
+      var ul = document.getElementById("list");
+      var li = document.createElement("li");
+      li.appendChild(document.createTextNode("List item"));
+      ul.appendChild(li);
+    }
+    setInterval(function () {
+      add();
+    }, 1000);
+  </script>
+  <body>
+    <div>
+      <ul id="list">
+        <li>List item</li>
+      </ul>
+    </div>
+  </body>
+  <script>
+  </script>
+</html>

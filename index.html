@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>title</title>
+    <script>
+      function onLoad() {
+        // access the iframe content window
+        var iframeWin = document.getElementById("iframe").contentWindow;
+        // create an observer
+        const resizeObserver = new ResizeObserver(function (elements) {
+          document.getElementById("iframe").style.height = `${elements[0].contentRect.height+50}px`
+        });
+        // observe iframe content
+        resizeObserver.observe(iframeWin.document.body);
+      }
+    </script>
+  </head>
+  <body>
+    <iframe id="iframe" src="iframe.html" onload="onLoad()" />
+  </body>
+</html>
